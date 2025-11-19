@@ -1,0 +1,206 @@
+.help-button {
+  position: fixed;
+  bottom: 110px;
+  right: 1rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1f497d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.dark-mode .help-button {
+  background: #0d2847;
+}
+
+.help-button:focus {
+  outline: none;
+}
+
+.help-button:active {
+  outline: none;
+}
+
+.help-button svg {
+  transition: none;
+}
+
+.help-button:hover {
+  background: #0d2847;
+  opacity: 0.9;
+}
+
+.dark-mode .help-button:hover {
+  background: #061829;
+  opacity: 0.9;
+}
+
+.help-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  padding: 1rem;
+}
+
+.help-content {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 0;
+  max-width: 550px;
+  width: 100%;
+  max-height: 80vh;
+  position: relative;
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.help-content-inner {
+  padding: 2.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.help-content-inner::-webkit-scrollbar {
+  width: 8px;
+}
+
+.help-content-inner::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.help-content-inner::-webkit-scrollbar-thumb {
+  background: rgba(43, 90, 158, 0.3);
+  border-radius: 10px;
+}
+
+.help-content-inner::-webkit-scrollbar-thumb:hover {
+  background: rgba(43, 90, 158, 0.5);
+}
+
+.help-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  line-height: 1;
+  font-weight: 300;
+  outline: none;
+}
+
+.help-close:hover {
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.help-close:focus {
+  outline: none;
+}
+
+.help-close:active {
+  opacity: 0.8;
+}
+
+.help-content h3 {
+  margin: 0 0 2rem 0;
+  color: #1f497d;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.dark-mode .help-content h3 {
+  color: #ffffff;
+}
+
+.help-section {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: rgba(31, 73, 125, 0.06);
+  transition: all 0.2s ease;
+}
+
+.dark-mode .help-section {
+  background: rgba(168, 184, 200, 0.07);
+}
+
+.help-section:hover {
+  opacity: 0.95;
+}
+
+.help-section:last-child {
+  margin-bottom: 0;
+}
+
+.help-section h4 {
+  color: #1f497d;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark-mode .help-section h4 {
+  color: #ffffff;
+}
+
+.help-section p {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .help-button {
+    width: 55px;
+    height: 55px;
+    bottom: 95px;
+    right: 1rem;
+  }
+
+  .help-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .help-content {
+    padding: 1.5rem;
+    max-height: 70vh;
+  }
+
+  .help-content h3 {
+    font-size: 1.5rem;
+  }
+}

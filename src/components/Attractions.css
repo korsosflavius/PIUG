@@ -1,0 +1,356 @@
+.attractions {
+  padding: 4rem 2rem;
+  background: var(--section-bg-4);
+  transition: background 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.attraction-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+}
+
+.attraction-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.attraction-category {
+  display: inline-block;
+  background: linear-gradient(135deg, #1f497d 0%, #a8b8c8 100%);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dark-mode .attraction-category {
+  background: linear-gradient(135deg, #0d2847 0%, #5a6a7a 100%);
+}
+
+.attraction-name {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 1rem 0;
+}
+
+.attraction-rating {
+  color: #ff9800;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.attraction-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.attraction-details-btn {
+  background: linear-gradient(135deg, #1f497d 0%, #a8b8c8 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.dark-mode .attraction-details-btn {
+  background: linear-gradient(135deg, #0d2847 0%, #5a6a7a 100%);
+}
+
+.attraction-details-btn:hover {
+  transform: scale(1.05);
+}
+
+.attraction-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.attraction-modal-content {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 0;
+  max-width: 700px;
+  width: 100%;
+  max-height: 80vh;
+  position: relative;
+  border: 2px solid rgba(43, 90, 158, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.dark-mode .attraction-modal-content {
+  border-color: rgba(43, 90, 158, 0.3);
+}
+
+.attraction-modal-inner {
+  padding: 2.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.attraction-modal-inner::-webkit-scrollbar {
+  width: 8px;
+}
+
+.attraction-modal-inner::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.attraction-modal-inner::-webkit-scrollbar-thumb {
+  background: rgba(43, 90, 158, 0.3);
+  border-radius: 10px;
+}
+
+.attraction-modal-inner::-webkit-scrollbar-thumb:hover {
+  background: rgba(43, 90, 158, 0.5);
+}
+
+.attraction-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  line-height: 1;
+  font-weight: 300;
+  outline: none;
+  z-index: 10;
+}
+
+.attraction-modal-close:hover {
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.attraction-modal-close:focus {
+  outline: none;
+}
+
+.attraction-modal-close:active {
+  opacity: 0.8;
+}
+
+.attraction-modal-title {
+  color: #1f497d;
+  font-size: 1.75rem;
+  margin: 0 0 1rem 0;
+}
+
+.dark-mode .attraction-modal-title {
+  color: #a8b8c8;
+}
+
+.attraction-modal-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.attraction-modal-category {
+  display: inline-block;
+  background: linear-gradient(135deg, #1f497d 0%, #a8b8c8 100%);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.dark-mode .attraction-modal-category {
+  background: linear-gradient(135deg, #0d2847 0%, #5a6a7a 100%);
+}
+
+.attraction-modal-rating {
+  color: #ff9800;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.attraction-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.attraction-modal-content::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.attraction-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(43, 90, 158, 0.3);
+  border-radius: 10px;
+}
+
+.attraction-modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(43, 90, 158, 0.5);
+}
+
+.attraction-modal-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.attraction-modal-info {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.attraction-modal-info-item {
+  padding: 0;
+}
+
+.attraction-modal-info-item strong {
+  color: #1f497d;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.dark-mode .attraction-modal-info-item strong {
+  color: #a8b8c8;
+}
+
+.attraction-modal-info-item p {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.attraction-modal-tips {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(43, 90, 158, 0.2);
+}
+
+.dark-mode .attraction-modal-tips {
+  border-top-color: rgba(43, 90, 158, 0.3);
+}
+
+.attraction-modal-tips strong {
+  color: #1f497d;
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.dark-mode .attraction-modal-tips strong {
+  color: #a8b8c8;
+}
+
+.attraction-modal-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.attraction-modal-tips li {
+  color: var(--text-secondary);
+  padding: 0.4rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.attraction-modal-tips li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #d4a017;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .attractions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .attraction-modal {
+    padding: 1rem;
+  }
+
+  .attraction-modal-content {
+    max-height: 95vh;
+  }
+
+  .attraction-modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .attraction-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .attraction-modal-body {
+    padding: 1.5rem;
+  }
+}

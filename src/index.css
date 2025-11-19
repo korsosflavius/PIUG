@@ -1,0 +1,122 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #333;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Light mode colors */
+  --bg-primary: #fafbfc;
+  --bg-secondary: #f0f3f7;
+  --bg-gradient-start: #e5eaf1;
+  --bg-gradient-end: #f5f7fa;
+  --text-primary: #1a3a5c;
+  --text-secondary: #4e6a8c;
+  --border-color: #d4dce6;
+  --card-bg: #ffffff;
+  --shadow: rgba(31, 73, 125, 0.08);
+  
+  /* Section backgrounds - unified background */
+  --section-bg-1: #f1f4f8;
+  --section-bg-2: #f1f4f8;
+  --section-bg-3: #f1f4f8;
+  --section-bg-4: #f1f4f8;
+}
+
+.dark-mode {
+  color-scheme: dark;
+  
+  /* Dark mode colors */
+  --bg-primary: #0a0e14;
+  --bg-secondary: #0f1419;
+  --bg-gradient-start: #0f1419;
+  --bg-gradient-end: #0a0e14;
+  --text-primary: #e6eaf0;
+  --text-secondary: #9ca6b8;
+  --border-color: #1a2332;
+  --card-bg: #161b22;
+  --shadow: rgba(0, 0, 0, 0.6);
+  
+  /* Section backgrounds - unified dark background */
+  --section-bg-1: #0d1117;
+  --section-bg-2: #0d1117;
+  --section-bg-3: #0d1117;
+  --section-bg-4: #0d1117;
+}
+
+.dark-mode body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scroll offset for fixed header */
+section,
+#home,
+#search,
+#carousel,
+#attractions,
+#restaurants,
+#info-table,
+#video,
+#contact {
+  scroll-margin-top: 70px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  font-weight: 500;
+  color: #c41e3a;
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d4a017;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+}

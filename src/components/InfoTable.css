@@ -1,0 +1,175 @@
+.info-table-section {
+  padding: 4rem 2rem;
+  background: var(--section-bg-4);
+  transition: background 0.3s ease;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: var(--card-bg);
+  border-radius: 15px;
+  margin: 2rem 0;
+  transition: all 0.3s ease;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.info-table thead {
+  background: linear-gradient(135deg, #1f497d 0%, #a8b8c8 100%);
+  color: white;
+}
+
+.dark-mode .info-table thead {
+  background: linear-gradient(135deg, #0d2847 0%, #5a6a7a 100%);
+}
+
+.info-table th {
+  padding: 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.info-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.info-table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.info-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.info-table td {
+  padding: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.price {
+  font-weight: 600;
+  color: #1f497d;
+  font-size: 1rem;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-badge.natură {
+  background: #d4edda;
+  color: #155724;
+}
+
+.category-badge.cultură {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.category-badge.istoric {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.category-badge.centru {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.category-badge.sport {
+  background: #e2d1f9;
+  color: #6610f2;
+}
+
+.info-note {
+  background: rgba(43, 90, 158, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  transition: background 0.3s ease;
+}
+
+.dark-mode .info-note {
+  background: rgba(43, 90, 158, 0.2);
+}
+
+.info-note p {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Responsive Design pentru Mobile */
+@media (max-width: 768px) {
+  .info-table-section {
+    padding: 2rem 1rem;
+  }
+
+  .table-container {
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .info-table {
+    min-width: 100%;
+  }
+
+  .info-table thead {
+    display: none;
+  }
+
+  .info-table tbody tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+  }
+
+  .info-table tbody tr:hover {
+    background: var(--card-bg);
+  }
+
+  .info-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .info-table td:last-child {
+    border-bottom: none;
+  }
+
+  .info-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #1f497d;
+    flex: 0 0 40%;
+  }
+
+  .info-table td strong {
+    font-size: 1.1rem;
+  }
+
+  .info-note {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

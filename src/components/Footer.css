@@ -1,0 +1,133 @@
+.footer {
+  background: linear-gradient(135deg, #1f497d 0%, #a8b8c8 100%);
+  color: white !important;
+  padding: 3rem 2rem 1rem;
+}
+
+.dark-mode .footer {
+  background: linear-gradient(135deg, #0d2847 0%, #5a6a7a 100%);
+  color: white !important;
+}
+
+.footer * {
+  color: white !important;
+}
+
+.footer a {
+  color: white !important;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section .logo {
+  margin-bottom: 0.8rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-section .logo-bold {
+  font-weight: 700;
+}
+
+.footer-section .logo-light {
+  font-weight: 400;
+}
+
+.footer-section h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.footer-section:first-child p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  font-weight: 400;
+  font-family: 'Lora', 'Georgia', serif;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.social-links a {
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
