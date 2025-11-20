@@ -9,12 +9,12 @@ const Hero: React.FC = () => {
     if (!video) return;
 
     const handleLoadedMetadata = () => {
-      video.currentTime = 1; // Start at 1 second
+      video.currentTime = 1;
     };
 
     const handleTimeUpdate = () => {
       if (video.duration && video.currentTime >= video.duration - 1) {
-        video.currentTime = 1; // Loop back to 1 second before end
+        video.currentTime = 1;
       }
     };
 
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
             Un oraș plin de istorie, cultură și peisaje montane spectaculoase
           </p>
           <button className="hero-button" onClick={() => {
-            document.getElementById('carousel')?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('carousel')?.scrollIntoView({ behavior: 'smooth'});
           }}>
             Explorează Acum
           </button>

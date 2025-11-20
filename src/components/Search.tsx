@@ -72,10 +72,17 @@ const Search: React.FC = () => {
   };
 
   const handleResultClick = (result: SearchResult) => {
-    const sectionId = result.type === 'attraction' ? 'attractions' : 'restaurants';
-    const element = document.getElementById(sectionId);
+    const prefix = result.type === 'attraction' ? 'attraction-' : 'restaurant-';
+    const cardId =
+      prefix +
+      result.name
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-');
+    const element = document.getElementById(cardId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
     setShowResults(false);
     setSearchTerm('');

@@ -2,7 +2,7 @@
   background: linear-gradient(135deg, #1f497d 0%, #a8b8c8 100%);
   color: white;
   padding: 1rem 0;
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   right: 0;

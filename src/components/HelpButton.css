@@ -44,7 +44,7 @@
 }
 
 .help-modal {
-  position: fixed;
+    position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -53,26 +53,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1001;
+  z-index: 2000;
   padding: 1rem;
 }
 
 .help-content {
-  background: var(--card-bg);
+background: var(--card-bg);
   border-radius: 15px;
   padding: 0;
-  max-width: 550px;
-  width: 100%;
-  max-height: 80vh;
+  max-width: 400px;
+  width: 70%;
+  min-height: 100%;
   position: relative;
-  border: none;
   transition: all 0.3s ease;
-  overflow: hidden;
 }
 
 .help-content-inner {
-  padding: 2.5rem;
-  max-height: 80vh;
+  padding: 2rem;
+  max-height: 90vh;
   overflow-y: auto;
   overflow-x: hidden;
 }

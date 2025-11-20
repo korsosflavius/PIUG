@@ -22,7 +22,7 @@ const attractions: Attraction[] = [
     id: 1,
     name: 'Tâmpa',
     description: 'Muntele Tâmpa oferă priveliști spectaculoase asupra orașului. Accesibil pe jos sau cu telecabina.',
-    icon: '🏔️',
+    icon: '',
     category: 'Natură',
     rating: 4.8,
     details: {
@@ -43,7 +43,7 @@ const attractions: Attraction[] = [
     id: 2,
     name: 'Strada Sforii',
     description: 'Una dintre cele mai înguste străzi din Europa, cu doar 1.3 metri lățime.',
-    icon: '🏘️',
+    icon: '',
     category: 'Istoric',
     rating: 4.5,
     details: {
@@ -64,7 +64,7 @@ const attractions: Attraction[] = [
     id: 3,
     name: 'Biserica Neagră',
     description: 'Cea mai mare biserică gotică din România, construită între 1385 și 1477.',
-    icon: '⛪',
+    icon: '',
     category: 'Arhitectură',
     rating: 4.9,
     details: {
@@ -85,7 +85,7 @@ const attractions: Attraction[] = [
     id: 4,
     name: 'Cetatea Brașov',
     description: 'Bastioane medievale și turnuri de apărare din secolul XV.',
-    icon: '🏰',
+    icon: '',
     category: 'Istoric',
     rating: 4.7,
     details: {
@@ -106,7 +106,7 @@ const attractions: Attraction[] = [
     id: 5,
     name: 'Piața Sfatului',
     description: 'Inima centrului istoric, înconjurată de clădiri colorate și terase.',
-    icon: '🏛️',
+    icon: '',
     category: 'Centru',
     rating: 4.8,
     details: {
@@ -127,7 +127,7 @@ const attractions: Attraction[] = [
     id: 6,
     name: 'Poiana Brașov',
     description: 'Stațiune montană perfectă pentru schi iarna și drumeții vara.',
-    icon: '⛷️',
+    icon: '',
     category: 'Sport',
     rating: 4.6,
     details: {
@@ -149,7 +149,7 @@ const attractions: Attraction[] = [
     id: 7,
     name: 'Prima Școală Românească',
     description: 'Muzeu istoric dedicat învățământului românesc din secolul al XVI-lea.',
-    icon: '📚',
+    icon: '',
     category: 'Cultură',
     rating: 4.5,
     details: {
@@ -171,7 +171,7 @@ const attractions: Attraction[] = [
     id: 8,
     name: 'Turnul Alb și Turnul Negru',
     description: 'Turnuri medievale de apărare cu vedere panoramică asupra orașului.',
-    icon: '🏰',
+    icon: '',
     category: 'Istoric',
     rating: 4.6,
     details: {
@@ -210,17 +210,26 @@ const Attractions: React.FC = () => {
         <h2 className="section-title">Atracții Turistice</h2>
         <p className="section-subtitle">Descoperă cele mai frumoase locuri din Brașov</p>
         <div className="attractions-grid">
-          {attractions.map((attraction) => (
-            <div 
-              key={attraction.id} 
-              className="attraction-card"
-              onClick={() => openModal(attraction)}
-            >
-              <h3 className="attraction-name">{attraction.name}</h3>
-              <p className="attraction-description">{attraction.description}</p>
-              <button className="attraction-details-btn">Detalii →</button>
-            </div>
-          ))}
+          {attractions.map((attraction) => {
+            // Generează un id unic din nume (fără diacritice, spații, litere mici)
+            const cardId = `attraction-` + attraction.name
+              .toLowerCase()
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '')
+              .replace(/[^a-z0-9]+/g, '-');
+            return (
+              <div
+                key={attraction.id}
+                id={cardId}
+                className="attraction-card"
+                onClick={() => openModal(attraction)}
+              >
+                <h3 className="attraction-name">{attraction.name}</h3>
+                <p className="attraction-description">{attraction.description}</p>
+                <button className="attraction-details-btn">Vezi Detalii</button>
+              </div>
+            );
+          })}
         </div>
       </div>
 

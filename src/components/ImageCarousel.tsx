@@ -69,9 +69,10 @@ const ImageCarousel: React.FC = () => {
   useEffect(() => {
     if (!isAutoPlaying) return;
 
+
     const interval = setInterval(() => {
       goToNext();
-    }, 5000); // Change image every 5 seconds
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [currentIndex, isAutoPlaying]);
@@ -148,14 +149,6 @@ const ImageCarousel: React.FC = () => {
             ))}
           </div>
 
-          {/* Auto-play toggle */}
-          <button 
-            className="carousel-autoplay-toggle"
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            aria-label={isAutoPlaying ? 'Oprește redarea automată' : 'Pornește redarea automată'}
-          >
-            <span>{isAutoPlaying ? '⏸' : '▶'}</span>
-          </button>
         </div>
       </div>
     </section>

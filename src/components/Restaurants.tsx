@@ -185,22 +185,31 @@ const Restaurants: React.FC = () => {
         <h2 className="section-title">Restaurante Recomandate</h2>
         <p className="section-subtitle">Savurează bucătăria locală și internațională</p>
         <div className="restaurants-grid">
-          {restaurants.map((restaurant) => (
-            <div 
-              key={restaurant.id} 
-              className="restaurant-card"
-              onClick={() => openModal(restaurant)}
-            >
-              <div className="restaurant-header">
-                <h3 className="restaurant-name">{restaurant.name}</h3>
-                <div className="restaurant-rating">
-                  ★ {restaurant.rating}
+          {restaurants.map((restaurant) => {
+            // Generează un id unic din nume (fără diacritice, spații, litere mici)
+            const cardId = `restaurant-` + restaurant.name
+              .toLowerCase()
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '')
+              .replace(/[^a-z0-9]+/g, '-');
+            return (
+              <div
+                key={restaurant.id}
+                id={cardId}
+                className="restaurant-card"
+                onClick={() => openModal(restaurant)}
+              >
+                <div className="restaurant-header">
+                  <h3 className="restaurant-name">{restaurant.name}</h3>
+                  <div className="restaurant-rating">
+                      ★ {restaurant.rating}
+                  </div>
                 </div>
+                <p className="restaurant-description">{restaurant.description}</p>
+                <button className="restaurant-button">Vezi Detalii</button>
               </div>
-              <p className="restaurant-description">{restaurant.description}</p>
-              <button className="restaurant-button">Vezi Detalii →</button>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

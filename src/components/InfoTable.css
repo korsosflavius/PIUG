@@ -50,7 +50,7 @@
 
 .info-table td {
   padding: 1.25rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-primary);
 }
 
@@ -68,31 +68,6 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-}
-
-.category-badge.natură {
-  background: #d4edda;
-  color: #155724;
-}
-
-.category-badge.cultură {
-  background: #fff3cd;
-  color: #856404;
-}
-
-.category-badge.istoric {
-  background: #d1ecf1;
-  color: #0c5460;
-}
-
-.category-badge.centru {
-  background: #f8d7da;
-  color: #721c24;
-}
-
-.category-badge.sport {
-  background: #e2d1f9;
-  color: #6610f2;
 }
 
 .info-note {

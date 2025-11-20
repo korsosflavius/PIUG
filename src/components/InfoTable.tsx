@@ -10,19 +10,19 @@ interface InfoItem {
 const infoData: InfoItem[] = [
   {
     location: 'Telecabina Tâmpa',
-    schedule: 'Martie-Noiembrie: 09:30-19:00, Decembrie-Februarie: 09:30-17:00, Închis Luni',
+    schedule: 'Martie-Noiembrie: 09:30-19:00,\nDecembrie-Februarie: 09:30-17:00,\nÎnchis Luni',
     price: '45 RON dus-întors',
     duration: '2-3 ore'
   },
   {
     location: 'Biserica Neagră',
-    schedule: 'Aprilie-Octombrie: 10:00-18:00, Noiembrie-Martie: 10:00-15:30, Duminică: 12:00-18:00',
+    schedule: 'Aprilie-Octombrie: 10:00-18:00,\nNoiembrie-Martie: 10:00-15:30,\nDuminică: 12:00-18:00',
     price: '20 RON',
     duration: '1 oră'
   },
   {
     location: 'Cetatea Brașov - Bastionul Țesătorilor',
-    schedule: 'Marți-Duminică: 10:00-18:00, Închis Luni',
+    schedule: 'Marți-Duminică: 10:00-18:00,\nÎnchis Luni',
     price: '10 RON',
     duration: '45 minute'
   },
@@ -34,7 +34,7 @@ const infoData: InfoItem[] = [
   },
   {
     location: 'Muzeul de Istorie - Casa Sfatului',
-    schedule: 'Marți-Duminică: 10:00-18:00, Închis Luni',
+    schedule: 'Marți-Duminică: 10:00-18:00,\nÎnchis Luni',
     price: '15 RON',
     duration: '1 oră'
   },
@@ -46,13 +46,13 @@ const infoData: InfoItem[] = [
   },
   {
     location: 'Poiana Brașov',
-    schedule: 'Sezon Schi (Decembrie-Martie): 09:00-16:30, Vară: Activități variate',
+    schedule: 'Sezon Schi (Decembrie-Martie): 09:00-16:30,\nVară: Activități variate',
     price: 'Skipass de la 150 RON',
     duration: 'Zi întreagă'
   },
   {
     location: 'Prima Școală Românească',
-    schedule: 'Marți-Duminică: 10:00-18:00, Închis Luni',
+    schedule: 'Marți-Duminică: 10:00-18:00,\nÎnchis Luni',
     price: '8 RON',
     duration: '30 minute'
   },
